@@ -218,8 +218,9 @@ if placeTorches then
   if turtle.getItemCount(defaultTorchSlot) > 0 then
     setTorchSlots(defaultTorchSlot)
   else
+    placeTorches = false
     print("Warning: inventory slot ", defaultTorchSlot, " empty.")
-    print("Torches will not be placed.")  
+    print("Torches will not be placed.")
   end
 end
 
