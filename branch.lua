@@ -238,7 +238,7 @@ for i = 1, branchCount do
   -- If more fuel is needed, attempt to refuel from inventory. If
   -- necessary, pause and ask for fuel.
 
-  local fuelCost = (i - 1) * 4 + 2 * branchLength
+  local fuelCost = (i - 1) * (2 * branchSpacing) + 2 * branchLength
   if placeTorches then
     if branchLength > torchInterval then
       fuelCost = fuelCost + 2 * (branchLength / torchInterval - 1)
