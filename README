@@ -1,0 +1,23 @@
+computercraft git repository
+By Darren M. Struthers <dstruthers@gmail.com>
+
+OVERVIEW
+This git repository contains a collection of programs written for the
+ComputerCraft mod for Minecraft. For more information, see:
+
+ComputerCraft: http://www.computercraft.info/
+Minecraft: http://www.minecraft.net/
+
+These programs have been written for, and tested using, the Feed The Beast
+Beta A mod pack, which contains ComputerCraft 1.46. The author of these
+programs assumes no responsibility or liability for any problems or damages
+caused by running these programs. See the warranty clause of the LICENSE for
+more information.
+
+REPORTING BUGS OR IDEAS FOR IMPROVEMENT
+If you encounter a bug or have a suggestion for how these programs could be
+improved, feel free to e-mail the author or submit a pull request.
+
+LICENSING
+This is free software licensed under the terms of the X11 license. See LICENSE
+for more information.
