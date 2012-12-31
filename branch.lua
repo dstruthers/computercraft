@@ -326,7 +326,7 @@ for i = 1, branchCount do
   -- and dump everything except what is known to be fuel and
   -- torches into the chest.
 
-  for slot = 2, 16 do
+  for slot = 1, 16 do
     if not (searchTable(fuelSlots, slot) or searchTable(torchSlots, slot)) then
       turtle.select(slot)
       turtle.drop()
