@@ -14,6 +14,7 @@ function forward (count)
       dig()
     end
     if not turtle.forward() then
+      turtle.attack()
       forward()
     end
     count = count - 1
@@ -26,12 +27,20 @@ function digUp ()
   end
 end
 
-function up ()
-  if turtle.detectUp() then
-    digUp()
+function up (count)
+  if count == nil then
+    count = 1
   end
-  if not turtle.up() then
-    up()
+
+  while count > 0 do
+    if turtle.detectUp() then
+      digUp()
+    end
+    if not turtle.up() then
+      turtle.attackUp()
+      up()
+    end
+    count = count - 1
   end
 end
 
@@ -41,12 +50,20 @@ function digDown ()
   end
 end
 
-function down ()
-  while turtle.detectDown() do
-    digDown()
+function down (count)
+  if count == nil then
+    count = 1
   end
-  if not turtle.down() then
-    down()
+
+  while count > 0 do
+    if turtle.detectDown() then
+      digDown()
+    end
+    if not turtle.down() then
+      turtle.attackDown()
+      down()
+    end
+    count = count - 1
   end
 end
 
@@ -55,10 +72,19 @@ function turnAround ()
   turtle.turnRight()
 end
 
-function back ()
-  if not turtle.back() then
+function back (count)
+  if count == nil or count == 1 then
+    if not turtle.back() then
+      turnAround()
+      forward()
+      turnAround()
+    end
+  else
     turnAround()
-    forward()
+    while count > 0 do
+      forward()
+      count = count - 1
+    end
     turnAround()
   end
 end
